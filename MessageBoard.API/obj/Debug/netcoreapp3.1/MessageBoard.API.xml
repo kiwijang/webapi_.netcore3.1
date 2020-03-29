@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MessageBoard.API</name>
+    </assembly>
+    <members>
+        <member name="T:MessageBoard.API.Controllers.BaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MessageBoard.API.Controllers.MessageController">
+            <summary>
+            留言板 API
+            </summary>
+        </member>
+        <member name="M:MessageBoard.API.Controllers.MessageController.#ctor(MessageBoard.API.Services.IMsgService)">
+            <summary>
+            MessageController
+            </summary>
+            <param name="service">注入 IMsgService</param>
+        </member>
+        <member name="M:MessageBoard.API.Controllers.MessageController.GetMessage(System.Int32)">
+            <summary>
+            根據 Id 回傳一筆詳細資料
+            </summary>
+            <param name="id">Message 的 ID</param>
+            <returns>Ok(new { result, result.Data })</returns>
+        </member>
+        <member name="M:MessageBoard.API.Controllers.MessageController.PostFilterMessage(System.String,MessageBoard.API.Models.PageModel)">
+            <summary>
+            根據 keyword 回傳多筆
+            </summary>
+            <param name="keyword"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MessageBoard.API.Controllers.MessageController.PostCreateMessage(MessageBoard.API.Models.MsgModel)">
+            <summary>
+            新增一筆
+            </summary>
+            <param name="msgModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MessageBoard.API.Controllers.MessageController.DeleteMessage(System.Int32)">
+            <summary>
+            根據 Id 刪除一筆
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
